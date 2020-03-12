@@ -22,7 +22,7 @@ Reference similar project: https://github.com/alvarocavalcanti/pierre-decheck
 
 ```yaml
 - name: Check pull request dependency
-  uses: serucee/pull-request-dependency-action@master
+  uses: MarineXchange/pull-request-dependency-action@master
   with:
     token: ${{ secrets.GH_AUTH_TOKEN }}
     repository-owner: "MarineXchange"
