@@ -1,0 +1,19 @@
+name: 'Pull request dependency checker'
+description: 'GitHub Action to check external and in repository dependending pull requests'
+inputs:
+  token:
+    description: 'Access token'
+    required: true
+  repository-owner:
+    description: 'Repository owner'
+    required: true
+  pull-request-body:
+    description: 'Event Pull request body'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.token }}
+    - ${{ inputs.repository-owner }}
+    - ${{ inputs.pull-request-body }}
