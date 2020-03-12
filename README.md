@@ -1,7 +1,7 @@
 # pull-request-dependency-action
 An action that checks for same-repo or external pull request dependencies using the GitHub Api    
 
-Reference similar project: https://github.com/alvarocavalcanti/pierre-decheck
+A similar project: https://github.com/alvarocavalcanti/pierre-decheck
 
 ## Inputs
 
