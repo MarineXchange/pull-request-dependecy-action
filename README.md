@@ -21,6 +21,15 @@ Reference similar project: https://github.com/alvarocavalcanti/pierre-decheck
 ## Example usage
 
 ```yaml
+name: Dependency check
+
+on:
+  pull_request:
+    types: [opened, reopened, edited]
+
+jobs:
+  status-checks:
+
 - name: Check pull request dependency
   uses: MarineXchange/pull-request-dependency-action@master
   with:
