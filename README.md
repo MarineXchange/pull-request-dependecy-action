@@ -29,13 +29,15 @@ on:
 
 jobs:
   status-checks:
+    runs-on: ubuntu-latest
 
-- name: Check pull request dependency
-  uses: MarineXchange/pull-request-dependency-action@master
-  with:
-    token: ${{ secrets.GH_AUTH_TOKEN }}
-    repository-owner: "MarineXchange"
-    pull-request-payload: "${{ github.event.pull_request.body }}"
+    steps:
+    - name: Check pull request dependency
+      uses: MarineXchange/pull-request-dependency-action@master
+      with:
+        token: ${{ secrets.GH_AUTH_TOKEN }}
+        repository-owner: "MarineXchange"
+        pull-request-payload: "${{ github.event.pull_request.body }}"
 ```
 
 ## Usage
